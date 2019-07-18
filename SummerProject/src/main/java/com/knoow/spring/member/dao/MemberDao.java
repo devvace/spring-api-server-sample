@@ -28,6 +28,7 @@ public class MemberDao implements IMemberDao {
 	public int memberInsert(Member member) {
 		
 		int result = 0;
+		
 		String sql = "INSERT INTO member (memId, memPw, memMail) values (?,?,?)";
 		result = template.update(sql, member.getMemId(), member.getMemPw(), member.getMemMail());
 	
